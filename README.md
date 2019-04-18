@@ -183,6 +183,7 @@ end
 ![Devise](http://devise.plataformatec.com.br/)
 
 1. Add to `Gemfile`: `gem 'devise'`
+1. `bundle install`
 1. `rails generate devise:install`
 
     ![](https://i.imgur.com/tmAeS1v.png)
@@ -192,7 +193,7 @@ end
 		config.action_mailer.default_url_options = { host: 'localhost', port: 3000 } 
 
 1. `rails generate devise User`
-1. `rake db:migrate`
+1. `rails db:migrate`
 
 Take a moment review to review and check out the files/folders that were generated.
 
