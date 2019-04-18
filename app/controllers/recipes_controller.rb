@@ -1,5 +1,8 @@
 class RecipesController < ApplicationController
+  before_action :authenticate_user!, except: [:index]
+    
   def index
+    # @recipes = Recipe.where(user_id: current_user.id)
     @recipes = Recipe.all
     # render json: @recipes, include: :ingredients
   end
@@ -16,6 +19,10 @@ class RecipesController < ApplicationController
     puts params
     @recipe = Recipe.create(recipe_params)
     redirect_to @recipe
+  end
+
+  def edit
+
   end
 
   private
